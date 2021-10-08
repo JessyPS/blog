@@ -22,7 +22,7 @@ public class Postagem {
     private String texto;
 
     @Temporal(TemporalType.TIMESTAMP)
-    private Date date = new java.sql.Date(System.currentTimeMillis());
+    private Date data = new java.sql.Date(System.currentTimeMillis());
 //    private LocalDateTime date = LocalDateTime.now();
 
     public Long getId() {
@@ -50,11 +50,10 @@ public class Postagem {
     }
 
     public Date getDate() {
-        return date;
+        return data;
     }
 
     public void setDate(Date date) {
-        this.date = date;
+        this.data = data;
     }
-
 }

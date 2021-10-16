@@ -1,12 +1,11 @@
 package com.DigitalHouse.blog.controller;
 
-import com.DigitalHouse.blog.domain.Postagem;
+import com.DigitalHouse.blog.model.Postagem;
 import com.DigitalHouse.blog.repositoy.PostagemRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-
 import java.util.List;
 
 @RestController
@@ -49,7 +48,7 @@ public class PostController {
         return ResponseEntity.status(HttpStatus.OK).body(repository.save(postagem));
     }
 
-    @DeleteMapping("/{id}")  //o uso desta annotation é muito proximo da annotation GET
+    @DeleteMapping("/{id}")  //o uso desta annotation é muito próximo da annotation GET
     public void delete(@PathVariable Long id) {
         repository.deleteById(id);
     }

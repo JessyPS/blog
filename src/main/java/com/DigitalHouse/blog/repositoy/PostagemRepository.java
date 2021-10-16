@@ -1,6 +1,6 @@
 package com.DigitalHouse.blog.repositoy;
 
-import com.DigitalHouse.blog.domain.Postagem;
+import com.DigitalHouse.blog.model.Postagem;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

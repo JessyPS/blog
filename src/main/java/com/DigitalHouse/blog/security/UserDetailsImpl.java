@@ -20,10 +20,6 @@ public class UserDetailsImpl implements UserDetails{
         this.password = user.getSenha();
     }
 
-    public String getUserName() {
-        return username;
-    }
-
     public void setUserName(String username) {
         this.username = username;
     }
@@ -39,12 +35,12 @@ public class UserDetailsImpl implements UserDetails{
 
     @Override
     public String getPassword() {
-        return null;
+        return password;
     }
 
     @Override
     public String getUsername() {
-        return null;
+        return username;
     }
 
     @Override

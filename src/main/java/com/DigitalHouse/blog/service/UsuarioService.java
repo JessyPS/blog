@@ -23,6 +23,7 @@ public class UsuarioService {
 
         String senhaEncoder = encoder.encode(usuario.getSenha());
         usuario.setSenha(senhaEncoder);
+
         return repository.save(usuario);
     }
 
@@ -33,7 +34,7 @@ public class UsuarioService {
         if (usuario.isPresent()) {
             if (encoder.matches(user.get().getSenha(), usuario.get().getSenha())) {
 
-                String auth = user.get().getUsuario() + " : " + user.get().getSenha();
+                String auth = user.get().getUsuario() + ":" + user.get().getSenha();
                 byte[] encodeAuth = Base64.encodeBase64(auth.getBytes(Charset.forName("US-ASCII")));
                 String authHeader = "Basic " + new String(encodeAuth);
 

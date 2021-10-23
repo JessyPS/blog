@@ -48,15 +48,15 @@ public class PostController {
         return ResponseEntity.status(HttpStatus.OK).body(repository.save(postagem));
     }
 
-    @DeleteMapping("/{id}")  //o uso desta annotation é muito próximo da annotation GET
-    public void delete(@PathVariable Long id) {
-        repository.deleteById(id);
-    }
-
-//    @DeleteMapping ("/{id}")
-//    public ResponseEntity<?> delete(@PathVariable Long id){
+//    @DeleteMapping("/{id}")  //o uso desta annotation é muito próximo da annotation GET
+//    public void delete(@PathVariable Long id) {
 //        repository.deleteById(id);
-//        return new ResponseEntity<>(HttpStatus.NO_CONTENT);
 //    }
+
+    @DeleteMapping ("/{id}")
+    public ResponseEntity<?> delete(@PathVariable Long id){
+        repository.deleteById(id);
+        return new ResponseEntity<>(HttpStatus.NO_CONTENT);
+    }
 
 }

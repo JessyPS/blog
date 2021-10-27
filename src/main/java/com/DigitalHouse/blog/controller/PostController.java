@@ -2,11 +2,17 @@ package com.DigitalHouse.blog.controller;
 
 import com.DigitalHouse.blog.model.Postagem;
 import com.DigitalHouse.blog.repositoy.PostagemRepository;
+import io.swagger.annotations.Api;
+import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import java.util.List;
+
+@Api(value = "Product Endpoint", tags = {
+        "Product Endpoint"
+})
 
 @RestController
 @RequestMapping("/postagens") //endpoint
@@ -21,6 +27,7 @@ public class PostController {
         return ResponseEntity.ok(repository.findAll());
     }
 
+    @ApiOperation(value = "o que está fazendo")
     @GetMapping("/{id}")
     public ResponseEntity<Postagem> getById(@PathVariable Long id) {
 

@@ -59,6 +59,19 @@
 			<artifactId>spring-security-test</artifactId>
 			<scope>test</scope>
 		</dependency>
+		<!-- for Swagger Endpoints support -->
+		<dependency>
+			<groupId>io.springfox</groupId>
+			<artifactId>springfox-swagger2</artifactId>
+			<version>2.9.2</version>
+		</dependency>
+
+		<!-- for Swagger UI support -->
+		<dependency>
+			<groupId>io.springfox</groupId>
+			<artifactId>springfox-swagger-ui</artifactId>
+			<version>2.9.2</version>
+		</dependency>
 	</dependencies>
 	<build>
 		<plugins>
@@ -68,11 +81,11 @@
 				<artifactId>spring-boot-maven-plugin</artifactId>
 			</plugin>
 
-		<plugin>
-			<groupId>com.heroku.sdk</groupId>
-			<artifactId>heroku-maven-plugin</artifactId>
-			<version>2.0.8</version>
-		</plugin>
+<!--		<plugin>-->
+<!--			<groupId>com.heroku.sdk</groupId>-->
+<!--			<artifactId>heroku-maven-plugin</artifactId>-->
+<!--			<version>2.0.8</version>-->
+<!--		</plugin>-->
 
 <!--			<plugin>-->
 <!--				<groupId>org.apache.maven.plugins</groupId>-->
